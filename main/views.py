@@ -82,7 +82,6 @@ def login_user(request):
    return render(request, 'login.html', context)
 
 def logout_user(request):
-    print("jalan")
     logout(request)
     response = HttpResponseRedirect(reverse('main:login'))
     response.delete_cookie('last_login')
